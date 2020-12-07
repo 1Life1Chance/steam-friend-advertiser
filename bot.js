@@ -28,7 +28,7 @@ function doLogin(accountname, password, guard, message) {
     client.logOn({
         "accountName": accountname,
         "password": password,
-        twoFactorCode: SteamTotp.getAuthCode(guard),
+        "twoFactorCode": SteamTotp.getAuthCode(guard),
     });
     client.on('loggedOn', function(details) {
         console.log("Logged into Steam as " + client.steamID.getSteam3RenderedID());
