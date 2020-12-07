@@ -6,7 +6,7 @@
  */
 var SteamUser = require('steam-user');
 var client = new SteamUser();
-var sleep = require('sleep');
+var sleep = require('system-sleep');
 const readline = require('readline');
 const rl = readline.createInterface({
     input: process.stdin,
@@ -40,7 +40,7 @@ function doLogin(accountname, password, message) {
             if (client.myFriends.hasOwnProperty(key)) {
                 count++;
                 //Comment out line 43 if you want to risk it... Current delay is 2 seconds between each message.
-                sleep.sleep(2);
+                sleep(2000);
                 console.log('Sending Message Number: ' + count);
                 client.chatMessage(key, message);
 
