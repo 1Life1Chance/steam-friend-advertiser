@@ -17,7 +17,7 @@ rl.question('Username: ', function(accountname) {
     rl.question('Password: ', function(password) {
         rl.question('Guard code: ', function(guard) {
             rl.question('Message that you would like to send to your friends list: ', function(message) {
-                doLogin(accountname, password, , guard, message);
+                doLogin(accountname, password, guard, message);
                 rl.close();
             });
         });
